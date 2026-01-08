@@ -38,6 +38,9 @@ word = ""
 word_list = []
 
 sentence = sentence + " "
+sentence = sentence.lower()
+
+print(sentence)
 
 for i in sentence:
     if i != " ":
@@ -66,4 +69,3 @@ for i in range(len(word_list)):
 #Next Steps:
 
 # -1- dedupe the list
-# -2- Make all letters lowercase so the same word doesn't count seperately.
