@@ -2,12 +2,12 @@
 
 #First thing: I'm pretty sure a space is an ASCII character, let's see
 
-char = " "
+# char = " "
 
-if char == " ":
-    print("Yep, it's a character")
-else:
-    print("nope")
+# if char == " ":
+#     print("Yep, it's a character")
+# else:
+#     print("nope")
 
 #Great. If a space is a character, then we can find it in a string.
 #How do I return the index of an item in an iterable?
@@ -57,15 +57,22 @@ print(word_list)
 # Then print the word and the counter? yeah that should work
 
 counter = 0
-
-for i in range(len(word_list)):
-    word = word_list[i]
-    counter = 0
-    for j in range(len(word_list)):
-        if word == word_list[j]:
-            counter += 1
-    print(word + " : " + str(counter))
+counted_words_list = []
+for i in range(len(word_list)):  #for every word in the word_list
+    word = word_list[i]  #take the first word
+    counter = 0             #our counter is 0
+    for i in range(len(counted_words_list))
+    for j in range(len(word_list)): #then, for every word in that list
+        if word == word_list[j]:    #compare the first word to all the words
+            counter += 1            #If they match, then add one to counter
+            counted_words_list.append(word)            #Then add that word to a counted_words list
+    
+    # print(word + " : " + str(counter))
 
 #Next Steps:
 
 # -1- dedupe the list
+# so, one way (probably a dumb way) to dedupe is to do the whole counting thing, and then create a "counted_words" list that can then hold the words we already counted
+# and if that word is in that list, we don't nee to output it.
+
+#this file is now super gross, starting another file that's clean
