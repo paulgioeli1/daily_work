@@ -31,3 +31,4 @@ for i in range(len(word_list)):  #for every word in the word_list
     print(word + " : " + str(counter))    
 
 print(counted_words_list)    
+
