@@ -54,7 +54,21 @@ print(deduped_list)
 
 #great, let's make it a function now that we know it works:
 
-def dedupe(word_list): #must take a list
+def dedupe(sentence): #must take a string
+    sentence = sentence.lower()
+
+    word_list = []
+    current_word = ""
+
+    sentence = sentence + " " #We're using blank spaces to find words, and the last word has no space after it!
+
+    for a in sentence:
+        if a != " ":
+            current_word = current_word + a
+        else:
+            word_list.append(current_word)
+            current_word = ""
+
     deduped_list = []
 
     deduped_list.append(word_list[0])
@@ -72,3 +86,9 @@ def dedupe(word_list): #must take a list
             deduped_list.append(word_list[i])
     
     return(deduped_list)
+
+# Let's show this runs
+
+test = "this string string HaS bEEn run run been been been"
+
+print(dedupe(test))
