@@ -10,7 +10,8 @@ def dedupe(sentence): #must take a string
         if a != " ":
             current_word = current_word + a
         else:
-            word_list.append(current_word)
+            if current_word != "":
+                word_list.append(current_word)
             current_word = ""
 
     deduped_list = []

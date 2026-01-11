@@ -16,8 +16,9 @@ for a in test_string:
     else:
         if current_word != "":
             word_list.append(current_word)
-            current_word = ""
+        current_word = ""
 
+# print(word_list)
 
 deduped_string = dedupe(test_string)
 
@@ -32,6 +33,11 @@ for i in range(len(deduped_string)):
 
 print(deduped_string)
 print(counts_list)
+
+print("OMG, I think you've got it!!")
+
+for i in range(len(deduped_string)):
+    print(deduped_string[i] + " : " + str(counts_list[i]))
         
         
 
